@@ -1,0 +1,54 @@
+<!--
+
+    Desenvolva um programa que recebe do usuário, o placar de um jogo de futebol (os gols de cada time) e informa se o resultado foi um empate, se a vitória foi do primeiro time ou do segundo time.
+    
+    
+    //entrada de dados
+    // = informar os dois times de futebol
+    // = informar o placar do jogo
+    
+    
+    //processamento
+    // = realizar a validação através das estruturas condicionais
+    // = verificar se os times ganharam, perderam ou empataram
+    
+    //saida
+    // informar o resultado do jogo de futebol
+    
+    
+    //Informar os nomes dos times
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+    const time1 = prompt("Informe o nome do time");
+    const time2 = prompt("Informe o nome do time");
+    const golsTime1 = parseInt(prompt("Digite o numero de gols do " + time1 + ":"));
+    const golsTime2 = parseInt(prompt("Digite o numero de gols do " + time2 + ":"));
+    
+    if (isNaN(golsTime1) || golsTime1 < 0 || isNaN(golsTime2) || golsTime2 < 0) {
+    alert("Erro: Valores informados para os gols não são válidos. Digite apenas números maiores ou iguais a zero.");
+    
+    }
+if (golsTime1 === golsTime2) {
+    alert("Empate");
+}
+else if (golsTime1 > golsTime2) {
+    alert("Vitoria do " + time1 + "!");
+}
+else{
+    alert("Vitoria do " + time2 + "!");
+}
+    </script>
+    </body>
+    </html>
+    
+    

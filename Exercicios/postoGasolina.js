@@ -1,7 +1,65 @@
-// Um posto está vendendo combustíveis com a seguinte tabela de descontos:
 
 
 
+function calculoDesconto(tipoCombustivel, quantidade) {
+let desconto = 0; 
+switch (tipoCombustivel) {
+    case A:
+        if (quantidade <=20) {
+            desconto = 0.03;
+        }
+        else {
+            desconto = 0.05;
+        }
+        break;
+        case G:
+            if (quantidade <=20) {
+                desconto = 0.04;
+            }
+            else {
+                desconto = 0.06;
+            }
+            break;
+            //default:
+               // alert("Tipo de combustivel invalido!");
+                //return;
+            }
+            return desconto;   
+        }
+        const desconto = calculoDesconto(tipoCombustivel, quantidade);
+        const valorTotal = quantidade * precoPorLitro * (1 - desconto);
+        return valorTotal.toFixed(2)
+        
+        const tipoCombustivel = prompt("Digite o tipo de combustivel (A-álcool, G-gasolina):").toUpperCase();
+        
+        const quantidade = parseFloat(prompt("Digite a quantidade de litros:"));
+        
+        const valorAPagar = calculoValorAPagar(tipoCombustivel, quantidade);
+        
+        alert(`valor a ser pago: R$ ${valorAPagar}`);
+            function calculoValorAPagar(tipoCombustivel, quantidade) {
+                let precoPorLitro = 0; 
+                switch (tipoCombustivel) {
+                    case A:
+                        precoPorLitro = 4.9;
+                        break;
+                        case G:
+                            precoPorLitro = 5.3;
+                            break
+                            default:
+                                alert("Tipo de combustivel invalido!");
+                                return;
+                                
+                                
+                            }
+            }
+                    
+
+
+                        // Um posto está vendendo combustíveis com a seguinte tabela de descontos:
+                        
+                        
+                        
 // Álcool:
 // . até 20 litros, desconto de 3% por litro Álcool
 // . acima de 20 litros, desconto de 5% por litro

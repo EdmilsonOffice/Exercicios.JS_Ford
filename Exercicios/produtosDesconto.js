@@ -1,3 +1,32 @@
+const nomeProduto = prompt("Digite o nome do produto:");
+const quantidade = Number(prompt("Digite a quantidade do produto:"));
+const precoUnitario = parseFloat(prompt("Digite o preço unitario do produto:"));
+
+const total = quantidade * precoUnitario;
+let desconto = 0;
+
+if (quantidade <= 5) {
+    const totalAPagar = (quantidade * precoUnitario) * 0.02;
+    alert(`Seu produto ${nomeProduto}, quantidade: ${quantidade}`)
+} else if (quantidade <= 10){
+    desconto = total * 0.03;
+} else {
+    desconto = total * 0.05;
+}
+
+const totalAPagar = (quantidade * precoUnitario) * 0.02;
+
+console.log(`---Detalhes do produto---`);
+console.log(`Produto: ${nomeProduto}`);
+console.log(`Quantidade: ${quantidade}`);
+console.log(`Preço unitário: ${precoUnitario.toFixed(2)}`);
+alert(`Desconto: R$ ${desconto.toFixed(2)}`);
+alert(`Total a pagar: R$ ${totalAPagar.toFixed(2)}`);
+
+
+
+
+
 // Faça um algoritmo para ler: a descrição do produto (nome), a quantidade adquirida e o
 // preço unitário. Calcular e escrever o total (total = quantidade adquirida * preço unitário), o
 // desconto e o total a pagar (total a pagar = total - desconto), sabendo-se que:

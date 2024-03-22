@@ -20,16 +20,16 @@
 --> 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tarefa futebol</title>
 </head>
 <body>
     <script>
        
-    const time1 = prompt("Informe o nome do time");
+    /*const time1 = prompt("Informe o nome do time");
     const time2 = prompt("Informe o nome do time");
     const golsTime1 = parseInt(prompt("Digite o numero de gols do " + time1 + ":"));
     const golsTime2 = parseInt(prompt("Digite o numero de gols do " + time2 + ":"));
@@ -47,6 +47,29 @@ else if (golsTime1 > golsTime2) {
 else{
     alert("Vitoria do " + time2 + "!");
 }
+    */     
+   const nomeTimeA = prompt("Informe o nome do time A:") 
+   const placarTimeA = prompt(`Informe o placar do time: ${nomeTimeA}`);
+
+   const nomeTimeB = prompt("Informe o nome do time B:") 
+   const placarTimeB = prompt(`Informe o placar do time: ${nomeTimeB}`);
+
+   if (placarTimeA > placarTimeB) {
+    alert(
+        `O time ${nomeTimeA} ganhou do time ${nomeTimeB}. Por um placar de ${placarTimeA} x ${placarTimeB}`);
+
+   } else if (placarTimeA < placarTimeB) {
+        alert(
+            `o time ${nomeTimeB} ganhou do time ${nomeTimeA}. por um placar de ${ placarTimeB} x ${placarTimeA}`
+        )
+   }
+   else { alert(`o time ${nomeTimeB} empatou com o ${nomeTimeA}. Por um placar de ${placarTimeB} x ${placarTimeA}`)}
+
+    
+   
+
+
+
     </script>
     </body>
     </html>

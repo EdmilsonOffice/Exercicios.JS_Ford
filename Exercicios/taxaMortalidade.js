@@ -1,4 +1,106 @@
-function calcularTaxa(tipo,numNascidos, numObitos, numHabitantes) {
+             //VERSÃO NÃO CORRIGIDA
+
+
+/*function calcularTaxa(tipo, numNascidos, numObitos, numHabitantes) {
+    
+    let taxa = 0;
+
+    switch(tipo) {
+        case "natalidade":
+            taxa = (numNascidos * 1000) / numHabitantes;
+            break;
+
+        case "mortalidade":
+            taxa = (numObitos * 1000) / numHabitantes;
+            break;
+
+        default:
+            console.log("Tipo inválido. Digite 'natalidade' ou 'mortalidade'.");
+            return;
+
+    }
+   
+    return taxa.toFixed(2);
+}  
+  
+const tipo = prompt("Digite o tipo de taxa que deseja calcular (natalidade/mortalidade):").toLowerCase();
+
+const numNascidos = parseInt(prompt("Digite o número de nascidos:"));
+
+const numObitos = parseInt(prompt("Digite o número de óbitos:"));
+
+const numHabitantes = parseInt(prompt("Digite o número de habitantes:"));
+
+const taxa = calcularTaxa(tipo, numNascidos, numObitos, numHabitantes);
+
+if (taxa !== undefined) {
+
+    alert(`A taxa de ${tipo} é de ${taxa} por mil habitantes.`);
+}*/
+
+     // VERSÃO CORRIGIDA
+     function calculaNatalidadeMortalidade() {
+
+        let numeroHabitantes;
+
+         do {
+          numeroHabitantes = Number(window.prompt('Digite o numero de habitantes:'));
+
+         if(isNaN(numeroHabitantes)) {
+            window.alert('Você precisa digitar um Numero')
+         }
+
+         } while (isNaN(numeroHabitantes));
+
+         let opção;
+
+         do {
+
+             opção = window.prompt(`Digite a opção desejada:
+             [N] Taxa de Natalidade 
+             [M] Mortalidade
+             `).toUpperCase();
+
+             if (opção !== 'N' && opção !== 'M') {
+                window.alert('Erro: Digite uma opção válida');
+             }
+
+            } while (opção !== 'N' && opção !== 'M'); 
+                
+            
+         let taxa;
+         
+         switch(opção) {
+             case 'N':
+                 const numroNascimentos = Number(window.prompt('Digite o numero de nascimentos:'));
+                 window.alert(`A taxa de natalidade é ${numroNascimentos * 1000 / numeroHabitantes}`);
+                 break;
+                 
+                 case 'M':
+                     const numeroObitos = Number(window.prompt('Digite o numero de óbitos'));
+                     window.alert(`A taxa de mortalidade ${numeroObitos * 1000 / numeroHabitantes}`);
+                     break;
+                     default:
+                        window.alert('Opção inválida')
+                     
+                     
+                    }
+                    
+                    
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+/*function calcularTaxa(tipo,numNascidos, numObitos, numHabitantes) {
     let taxa = 0;
 
     switch(tipo) {
@@ -18,7 +120,7 @@ const numObitos = parseInt(prompt("Digite o numero de óbitos:"));
 const numHabitantes = parseInt(prompt("Digite o numero de habitantes:"));
 
 const taxa = calcularTaxa(tipo, numNascidos, numObitos, numHabitantes);
-alert(`A taxa de ${tipo} é de ${taxa} por mil habitantes.`);
+alert(`A taxa de ${tipo} é de ${taxa} por mil habitantes.`);*/
   
   
   

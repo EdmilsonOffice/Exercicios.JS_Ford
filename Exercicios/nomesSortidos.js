@@ -3,7 +3,48 @@
 // pessoa (para efetuar uma busca) e depois escrever a mensagem ACHEI, se o nome estiver
 // entre os 10 nomes lidos anteriormente (guardados no vetor), ou NÃO ACHEI caso contrário.
 
-function lerNome() {
+/*let frutas = ['banana', 'maçã', 'abacaxi', 'laramja'];
+console.log(frutas[2])
+
+/*for(let contador = 0; contador < 4; contador += 1){
+    console.log(frutas[contador], contador);
+}*/
+
+/*for(let i = 0; i < frutas.length; i++) {
+    console.log(frutas[i], i);
+}*/
+
+             //VERSÃO CORRIGIDA
+
+
+function buscarNome(){
+
+    
+    let nomes = [];
+    
+    for(let i = 0; i < 10; i++) {
+        
+        nomes.push(window.prompt('Digite um nome'));
+        //nomes [i] window.prompt('Digite um nome'));
+    }
+    console.log(nomes);
+
+    const nomeBuscado = window.prompt('Digite o nome que deseja buscar');
+
+     if(nomes.indexOf(nomeBuscado) >= 0){
+   //if (nomes.includes(nomeBuscado)) {
+    window.alert('Achei');
+   } else {
+    window.alert('Não Achei');
+    //nomes.indexOf(nomeBuscado) Retorna -1 se for falso
+   }
+}
+
+
+         //VERSÃO NÃO CORRIGIDA
+
+
+/*function lerNome() {
     const nome = prompt("Digite um nome:");
     return nome;
 }
@@ -30,4 +71,4 @@ function buscarNome(nome, vetor) {
     }
     else {
         alert("Não Achei");
-    }
+    }*/

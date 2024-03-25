@@ -1,5 +1,44 @@
 const nomeProduto = prompt("Digite o nome do produto:");
 const quantidade = Number(prompt("Digite a quantidade do produto:"));
+const precoUnitario = parseFloat(prompt("Digite o preço unitário do produto:"));
+
+const total = quantidade * precoUnitario;
+let desconto = 0;
+let totalAPagar = 0;
+
+if (quantidade <= 5) {
+    desconto = total * 0.02;
+    totalAPagar = total - desconto;
+} else if (quantidade <= 10){
+    desconto = total * 0.03;
+    totalAPagar = total - desconto;
+} else {
+    desconto = total * 0.05;
+    totalAPagar = total - desconto;
+}
+
+console.log("---Detalhes do produto---");
+console.log(`Produto: ${nomeProduto}`);
+console.log(`Quantidade: ${quantidade}`);
+console.log(`Preço unitário: R$ ${precoUnitario.toFixed(2)}`);
+console.log(`Desconto: R$ ${desconto.toFixed(2)}`);
+console.log(`Total a pagar: R$ ${totalAPagar.toFixed(2)}`);
+
+alert(`---Detalhes do produto---
+Produto: ${nomeProduto}
+Quantidade: ${quantidade}
+Preço unitário: R$ ${precoUnitario.toFixed(2)}
+Desconto: R$ ${desconto.toFixed(2)}
+Total a pagar: R$ ${totalAPagar.toFixed(2)}`);
+
+
+
+
+
+
+
+/*const nomeProduto = prompt("Digite o nome do produto:");
+const quantidade = Number(prompt("Digite a quantidade do produto:"));
 const precoUnitario = parseFloat(prompt("Digite o preço unitario do produto:"));
 
 const total = quantidade * precoUnitario;
@@ -22,7 +61,7 @@ console.log(`Quantidade: ${quantidade}`);
 console.log(`Preço unitário: ${precoUnitario.toFixed(2)}`);
 alert(`Desconto: R$ ${desconto.toFixed(2)}`);
 alert(`Total a pagar: R$ ${totalAPagar.toFixed(2)}`);
-
+/*
 
 
 
@@ -51,4 +90,4 @@ alert(`Total a pagar: R$ ${totalAPagar.toFixed(2)}`);
 
 //saída de dados
 // = mostrar a saída dos produtos que ela escolher e a quantidade e o preço de cada produto
-// = mostrar também o desconto de cada produto
+// = mostrar também o desconto de cada produto*/
